@@ -15,6 +15,7 @@
   <tbody>
     <% @apartments.each do |apartment| %>
       <tr>
+        <td><%= apartment.destination %></td>
         <td><%= apartment.rooms %></td>
         <td><%= apartment.paths %></td>
         <td><%= apartment.user.email %></td>
