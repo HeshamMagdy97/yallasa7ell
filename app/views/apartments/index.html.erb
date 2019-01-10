@@ -1,13 +1,17 @@
 <p id="notice"><%= notice %></p>
 
+<a class="btn btn-outline-dark my-2 my-sm-0  float-right  role="button"
+  <%= link_to 'Add Apartment', new_apartment_path %>
+</a>
 <h1>Apartments</h1>
-
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
+      <th>Destination</th>
+      <th>Owner Name</th>
+      <th>Owner phone</th>
       <th>Rooms</th>
       <th>Paths</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,18 +20,26 @@
     <% @apartments.each do |apartment| %>
       <tr>
         <td><%= apartment.destination %></td>
+        <td><%= apartment.user.name %></td>
+        <td><%= apartment.user.phone_number %></td>
         <td><%= apartment.rooms %></td>
         <td><%= apartment.paths %></td>
-        <td><%= apartment.user.email %></td>
-        <td><%= link_to 'Show', apartment %></td>
+        <td>
+          <a class="btn btn-info my-2 my-sm-0  float-right  role="button"
+            <%= link_to 'Show', apartment %></td>
+          </a>
         <%if current_user && current_user.id == apartment.user.id %>
-          <td><%= link_to 'Edit', edit_apartment_path(apartment) %></td>
-          <td><%= link_to 'Destroy', apartment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td>
+            <a class="btn btn-secondary my-2 my-sm-0  float-right  role="button"
+              <%= link_to 'Edit', edit_apartment_path(apartment) %></td>
+            </a>
+          <td>
+            <a class="btn btn-danger my-2 my-sm-0  float-right  role="button"
+              <%= link_to 'Destroy', apartment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </a>
         <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 <br>
-
-<%= link_to 'New Apartment', new_apartment_path %>
