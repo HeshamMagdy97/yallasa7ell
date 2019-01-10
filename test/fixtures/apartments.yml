@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rooms: 1
+  paths: 1
+  user: one
+
+two:
+  rooms: 1
+  paths: 1
+  user: two
