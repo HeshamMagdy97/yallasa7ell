@@ -38,6 +38,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
 
 gem 'bootstrap'
+
+gem "bootstrap_form", ">= 4.1.0"
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'rails-ujs', '~> 0.1.0'
 group :development, :test do

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <img src="https://yallasa7el.com/logo/logo.png" alt="yallasa7el" class="navbar-brand" height="75px" width="85px">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -12,16 +12,17 @@
       <li class="nav-item">
         <a class="nav-link" <%= link_to "apartments", apartments_path%></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <% if current_user %>
         <a class="btn btn-outline-dark my-2 my-sm-0"  role="button"
           <%= link_to "sign out", destroy_user_session_path, method: :delete%>
         </a>
+      <% else %>
+        <a class="nav-link" <%= link_to 'sign in ', new_user_session_path %> </a>
+        <a class="nav-link" <%= link_to 'sign up ', new_user_registration_path %> </a>
       <% end %>
+
     </form>
   </div>
 </nav>

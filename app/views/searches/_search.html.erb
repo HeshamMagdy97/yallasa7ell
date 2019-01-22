@@ -1,0 +1,15 @@
+<h3 class="d-flex justify-content-center align-items-center">Find your perfect sa7el rental easier than ever!</h3>
+<%= bootstrap_form_for search do |f| %>
+  <div class="field">
+    <%= f.text_field :destnation,  placeholder:  "Enter the destination..."%>
+  </div>
+  <div class="field">
+    <%= f.number_field :rooms, placeholder:  "Number of Rooms..."%>
+  </div>
+
+  <div class="field">
+    <%= f.number_field :pathes, placeholder:  "Number of pathrooms..."%>
+  </div>
+
+  <div class="d-flex justify-content-center align-items-center actions"><%= f.submit "Search" %></div>
+<% end %>
