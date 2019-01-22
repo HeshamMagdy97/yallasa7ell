@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  destnation: MyString
+  pathes: 1
+  rooms: 1
+
+two:
+  destnation: MyString
+  pathes: 1
+  rooms: 1
