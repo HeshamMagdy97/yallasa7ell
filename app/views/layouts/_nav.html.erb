@@ -12,6 +12,12 @@
       <li class="nav-item">
         <a class="nav-link" <%= link_to "apartments", apartments_path%></a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" <%= link_to "Search", new_search_path%></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" <%= link_to "offer apartment for rent", new_apartment_path%></a>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <% if current_user %>
